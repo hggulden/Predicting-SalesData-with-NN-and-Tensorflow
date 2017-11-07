@@ -1,3 +1,5 @@
+##Explonatory Data Analysis for Test Engineering Failure Time Prediction Dataset
+
 #Normalizing num var
 f_scale <- as.data.frame(scale(F_rng[,c(1,2,3,4,5,6)]))
 F_factor<-F_rng[,7:24]
