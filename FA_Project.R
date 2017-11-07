@@ -6,9 +6,7 @@ Fa <- read.csv("~/TDMS/FA_COST/Fa.csv")
 View(Fa)
 #load required packages, change with your file path
 source('~/TDMS/FA_COST/FA_Final_Set/randomForest/Trees_Packages.R')
-#M5
-m5tree <- M5P(log(Chargeable_minutes) ~ ., data = training,control = Weka_control(M = 10))
-M5tree.p<-predict(m5tree,xtest)
+
 #sampling
 set.seed(500)
 #stratified random sampling sum
@@ -47,6 +45,10 @@ prp(dt.model2, faclen = 3,fallen.leaves = TRUE, type=4, extra=1, varlen=0, yesno
 rpart.p<-predict(dt.model2,testing)
 summary(testing$Chargeable_minutes)
 #.................................
+
+#M5
+m5tree <- M5P(log(Chargeable_minutes) ~ ., data = training,control = Weka_control(M = 10))
+M5tree.p<-predict(m5tree,xtest)
 
 #Cubist
 
