@@ -1,3 +1,5 @@
+#Exercise below demostrates model comparison for predicting manufacturing test engineering issue investigation time predictions 
+
 #loading and viewing file,replace with your file path
 
 Fa <- read.csv("~/TDMS/FA_COST/Fa.csv")
